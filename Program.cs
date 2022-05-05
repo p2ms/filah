@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,34 +13,36 @@ using System.Threading.Tasks;
  *  Subir o projeto para o github em repositorio publico.  Informar link do projeto. Boa Sorte :)*/
 namespace ConsoleApplication1
 {
-    class Program : paciente
+    class Program : Paciente
     {
         static void Main(string[] args)
         {
 
-            string opc; 
-            paciente a = new paciente();
+            string opc;
+            Paciente a = new Paciente();
 
             Console.WriteLine("O que deseja?");
             Console.WriteLine("novo paciente - n");
             Console.WriteLine("Ver a fila - v");
             Console.WriteLine("Sair - q");
             opc = Console.ReadLine();
-    
-            if(opc == "n")
-            {
-            a.cadastro();
-            a.mostrar();
 
-            }else if(opc == "v")
+            if (opc == "n")
             {
-
-            }else(opc == "q")
+                a.cadastro();
+                Console.WriteLine("Deseja algo mais?");
+               // a.mostrar();           
+            }
+            else if (opc == "v")
             {
-                Console.WriteLine("Pressione a tecla enter novamente");
+               // break;
+            }
+            else if(opc == "q")
+            {
+                //Console.WriteLine("Pressione a tecla enter novamente");
             };
 
-            
+
         }
     }
 }
